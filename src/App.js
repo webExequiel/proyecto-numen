@@ -1,10 +1,13 @@
 import './App.css';
+import ViandasContextProvider from './context/ViandasContextProvider';
 
 function App() {
   return (
-    <div className="App">
+    <ViandasContextProvider>
 
-    </div>
+      {/* agregar los componentes que queremos que sean proveidos por el contexto */}
+
+    </ViandasContextProvider>
   );
 }
 
