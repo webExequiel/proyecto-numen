@@ -3,51 +3,61 @@
         {
             "id": 1,
             "name": "Barritas energéticas caseras, veganas y sin gluten",
+            "price": 180,
             "description": "La base de estas barritas son las avellanas, frutas secas, copos de avena y semillas de lino, dando lugar a un recurso de energía de alto valor protéico y repleto de grasas saludables. Son perfectas para todo el que quiera incrementar el consumo de proteínas en su dieta y por supuesto, antes o después de practicar ejercicio, las recomendamos para cubrir las necesidades de proteínas en deportistas veganos. "
         },
         {
             "id": 2,
             "name": "Hamburguesa vegana con pan negro",
+            "price": 850,
             "description": " Es una opcion con lentejas y garbanzos, saborizada con baharat, una mezcla de especias muy utilizada en la cocina de los países árabes. La hamburguesa de pan negro, hecho con centeno o trigo integral, puede tener un sabor un poco más fuerte y terroso que una hamburguesa tradicional, y puede ser una opción más saludable que el pan blanco, ya que es más alto en fibra y nutrientes. "
         },
         {
             "id": 3,
             "name": "Samosas",
+            "price": 380,
             "description": "Estas empanadillas de forma triangular estan rellenas por un preparado sencillo de vercduras, con un toque de especias muy exótico. La envoltura exterior consiste en una masa de harina de trigo y levadura, aceite de semillas y aderezada en ocasiones con comino.  "
         },
         {
             "id": 4,
             "name": "Ensalada de frutas",
+            "price": 480,
             "description": "Deliciosa variedad de frutas con salsa de naranjas sin tacc. "
         },
         {
             "id": 5,
             "name": "Grillados veganos",
+            "price": 580,
             "description": "Rica variedad de vegetales grillados a eleccion "
         },
         {
             "id": 6,
             "name": "Batidos veganos",
+            "price": 480,
             "description": "Variedad de batidos veganos, uno de los alimentos mas sanos. "
         },
         {
             "id": 7,
             "name": "Variedad de pastas con diferentes salsas veganas",
+            "price": 800,
             "description": "Irresistebles platos con pastas caseras realizadas en su totalidad con ingredientes veganos y variedad de salsas. "
         },
         {
             "id": 8,
             "name": "Pizza vegana",
+            "price": 880,
             "description": "Pizza de pimientos morrones, cebolla y hongos "
         },
         {
             "id": 9,
             "name": "Wrap de Espelta rellenos de Arroz, Coliflor al Curry y Tofu",
+            "price": 780,
             "description": "Tortillas de espelta con semillas (lino, chía y sésamo) como base para preparar estos burritos rellenos de arroz, coliflor con curry y tofu. "
         },
         {
             "id": 10,
             "name": "Hamburguesas veganas de lentejas y verduras",
+            "price": 480,
             "description": "Reducir el consumo de carne en casa y en su lugar añadir más legumbres y verduras a nuestra dieta es una buena idea, tanto a nivel personal para mejorar nuestra salud, además es una buena forma de contribuir a cuidar un poquito más de nuestro planeta. "
         }
     ]

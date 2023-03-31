@@ -1,13 +1,24 @@
-import './App.css';
+import ViandasCard from './componnents/viandasCards/ViandasCard';
 import ViandasContextProvider from './context/ViandasContextProvider';
+
 
 function App() {
   return (
-    <ViandasContextProvider>
+    <div style={{
+      display: "flex",
+      justufyContent: "center",
+      alignItems: "center",
+      height: "100vh"
 
-      {/* agregar los componentes que queremos que sean proveidos por el contexto */}
+    }}>
+      <ViandasCard />
+    </div>
+    /* <ViandasContextProvider> */
 
-    </ViandasContextProvider>
+    /* agregar los componentes que queremos que sean proveidos por el contexto */
+
+    /* </ViandasContextProvider> */
+
   );
 }
 
