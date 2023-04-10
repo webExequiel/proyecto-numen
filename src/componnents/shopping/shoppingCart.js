@@ -1,10 +1,8 @@
-import { TYPES } from "../../actions/shoppingActions";
+import { TYPES, removeAllProducts, removeOneProduct } from "../../actions/shoppingActions";
 import { useReducer } from "react";
 import { shoppingInitialState, shoppingReducer } from "../../reducer/shoppingReducer";
 import Product from "./producto";
 import CartItem from "./cartItem";
-
-
 
 const ShoppingCart = () => {
 
@@ -14,9 +12,9 @@ const ShoppingCart = () => {
   const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id });
   const deleteFromCart = (id, all = false) => {
     if (all) {
-      dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
+      dispatch(removeAllProducts(id));
     } else {
-      dispatch({ type: TYPES.REMOVE_ONE_PRODUCT, payload: id })
+      dispatch(removeOneProduct(id));
     }
   }
   const clearCart = (id) => dispatch({ type: TYPES.CLEAR_CART });
