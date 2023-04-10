@@ -1,17 +1,11 @@
-
+import './App.css';
+import { SendButton } from './componnents/botonAgregarCarrito';
 import ViandaModal from './componnents/viandasModal/ViandaModal';
-import ViandasContextProvider from './context/ViandasContextProvider';
-
 
 function App() {
   return (
-    <div /* style={{
-      display: "flex",
-      justufyContent: "center",
-      alignItems: "center",
-      height: "100vh"
-
-    }} */>
+    <div className="App">
+      <SendButton />
       <ViandaModal />
     </div>
     /* <ViandasContextProvider> */
