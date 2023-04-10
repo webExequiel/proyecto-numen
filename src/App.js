@@ -1,17 +1,18 @@
-import ViandasCard from './componnents/viandasCards/ViandasCard';
+
+import ViandaModal from './componnents/viandasModal/ViandaModal';
 import ViandasContextProvider from './context/ViandasContextProvider';
 
 
 function App() {
   return (
-    <div style={{
+    <div /* style={{
       display: "flex",
       justufyContent: "center",
       alignItems: "center",
       height: "100vh"
 
-    }}>
-      <ViandasCard />
+    }} */>
+      <ViandaModal />
     </div>
     /* <ViandasContextProvider> */
 

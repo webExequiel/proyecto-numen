@@ -5,7 +5,7 @@ export const ViandasContext = createContext()
 const ViandasContextProvider = ({ children }) => {
 
     const [viandas, setViandas] = useState([
-        { id: 1, name: "Vianda 1", description: " " }
+        { id: 1, name: "Vianda 1", price: 180, description: " " }
     ])
 
     return (
