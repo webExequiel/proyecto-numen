@@ -1,11 +1,12 @@
-import './App.css';
+import Search from "./componnents/component-navbar/Search";
+
 
 function App() {
   return (
-    <div className="App">
 
-    </div>
+    <Search />
+
   );
-}
+  }
 
 export default App;
