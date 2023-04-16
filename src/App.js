@@ -1,20 +1,23 @@
-import './App.css';
-import { SendButton } from './componnents/botonAgregarCarrito';
-import ViandaModal from './componnents/viandasModal/ViandaModal';
+import React from 'react'
+import styled from 'styled-components'
+import Navbar from './componnents/Navbar';
+import Home from './componnents/Home';
+import CarruselComidas from "./componnents/Carrusel";
 
-function App() {
+const App = () => {
   return (
-    <div className="App">
-      <SendButton />
-      <ViandaModal />
-    </div>
-    /* <ViandasContextProvider> */
-
-    /* agregar los componentes que queremos que sean proveidos por el contexto */
-
-    /* </ViandasContextProvider> */
-
+    <Container>
+      <Navbar />
+      <Home />
+      <h1>Carrusel</h1>
+      <CarruselComidas />
+    </Container>
   );
-}
+};
+
+const Container = styled.div` 
+  background:#FAF9F6;
+  height: 100vh;
+`;
 
 export default App;
