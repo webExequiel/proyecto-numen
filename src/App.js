@@ -1,13 +1,23 @@
-import './App.css';
+import React from 'react'
+import styled from 'styled-components'
+import Navbar from './Navbar';
+import Home from './Home';
 import CarruselComidas from "./componnents/Carrusel";
 
-function App() {
-  return (
-    <div className="App">
-      <h1>Carrusel</h1>
+const App = ()=>{
+ return (
+    <Container>
+      <Navbar/>
+      <Home/>
+       <h1>Carrusel</h1>
       <CarruselComidas/>
-    </div>
+    </Container>
   );
-}
+};
+
+const Container = styled.div ` 
+  background:#FAF9F6;
+  height: 100vh;
+`;
 
 export default App;
