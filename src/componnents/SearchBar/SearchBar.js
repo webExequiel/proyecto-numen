@@ -4,19 +4,24 @@ import axios from 'axios';
 
 const SearchBar = () => {
 
-    const [elementos, setElementos] = useState([]);
-    const [tablaElementos, setTablaElementos] = useState([]);
+    const [viandas, setViandas] = useState([]);
     const [busqueda, setBusqueda] = useState('');
+    // const [tablaViandas, setTablaViandas] = useState([]);
+
   
-    const peticionGet=async() => {
-      await axios.get('')
+    const peticionGet = async () => {
+      await axios.get('http://localhost:5000')
       .then(response=>{
-        setElementos(response.data);
-        setTablaElementos(response.data);
+        setViandas(response);
+        // setTablaViandas(response.data);
       }).catch(error=>{
         console.log(error);
       })
       }
+
+      useEffect(()=>{
+        peticionGet();
+      },[]);
   
     const handleChange=e=>{
         setBusqueda(e.target.value);
@@ -25,12 +30,12 @@ const SearchBar = () => {
       }
   
     const filtrar = (terminoBusqueda) => {
-        var resultadosBusqueda=tablaElementos.filter((elementos) => {
-          if (elementos.nombre.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
-            return elementos;
+        var resultadosBusqueda=tablaViandas.filter((viandas) => {
+          if (viandas.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+            return viandas;
           }
         })
-        setElementos(resultadosBusqueda);
+        setViandas(resultadosBusqueda);
       }
   return (
     <div>
@@ -44,7 +49,7 @@ const SearchBar = () => {
             />
         </div>
 
-        <div className='table-responsive'>
+        {/* <div className='table-responsive'>
             <table className='table table-sm table-bordered'>
                 <thead>
                     <tr>
@@ -56,19 +61,19 @@ const SearchBar = () => {
                 </thead>
 
                 <tbody>
-                    {elementos &&
-                    elementos.map((elementos) =>(
-                    <tr key={elementos.id}>
-                        <td>{elementos.id}</td>
-                        <td>{elementos.nombre}</td>
-                        <td>{elementos.precio}</td>
-                        <td>{elementos.descripcion}</td>
+                    {Viandas &&
+                    Viandas.map((Viandas) =>(
+                    <tr key={Viandas.id}>
+                        <td>{Viandas.id}</td>
+                        <td>{Viandas.nombre}</td>
+                        <td>{Viandas.precio}</td>
+                        <td>{Viandas.descripcion}</td>
                     </tr>
                     ))}
                 </tbody>
 
             </table>
-        </div>
+        </div> */}
     </div>
 
   )
