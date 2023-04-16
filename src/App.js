@@ -1,8 +1,6 @@
 import './App.css';
 import CarruselComidas from "./componnents/Carrusel";
 
-
-
 function App() {
   return (
     <div className="App">
