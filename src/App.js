@@ -1,11 +1,11 @@
 import './App.css';
-import { SendButton } from './componnents/botonAgregarCarrito';
+import CarruselComidas from "./componnents/Carrusel";
 
 function App() {
   return (
     <div className="App">
-      <SendButton/>
-
+      <h1>Carrusel</h1>
+      <CarruselComidas/>
     </div>
   );
 }
