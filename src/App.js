@@ -4,7 +4,7 @@ import CarruselComidas from "./componnents/Carrusel";
 function App() {
   return (
     <div className="App">
-      <h1>Carrusel</h1>
+      <h1>Las Viandas Mas Sanas y Deliciosas</h1>
       <CarruselComidas/>
     </div>
   );

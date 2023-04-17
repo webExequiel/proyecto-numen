@@ -2,10 +2,11 @@ import React from 'react';
 import OwlCarousel from 'react-owl-carousel'
 import 'owl.carousel/dist/assets/owl.carousel.css';
 import 'owl.carousel/dist/assets/owl.theme.default.css';
-import '../App.css';
+import styled from 'styled-components';
 
-const images = [
-    'burger',  
+const images= 
+[
+    'burger', 
     'empanadas', 
     'grillados', 
     'ensaladaFrutas', 
@@ -16,6 +17,8 @@ const images = [
     'rollVegano',
     'jugos'
 ]
+
+
     const options = {
     items: 5,
     nav: false,
@@ -45,16 +48,28 @@ const images = [
       }
 };
 
+const OwlCarouselWrapper = styled.div`
+  .owl-item img {
+    display: flex;
+    aspect-ratio: 4/3;
+    width:100%;
+    object-fit: cover;
+
+  }
+`;
+
   function CarruselComidas () {
-    return (
+    return (<OwlCarouselWrapper>
       <OwlCarousel className="owl-theme" {...options}>
-        {images.map((image, index) => (
-            <div className={image}><h4>{index + 1}</h4>
+      
+       {images.map((image) => (
+            <div className={image}>
                 <img className={`imagen${image}`} src= {require (`../imagenes/${image}.jpg`)} alt={image}/>
             </div>
         ))}
       
       </OwlCarousel>
+      </OwlCarouselWrapper>
     );
   }
   
