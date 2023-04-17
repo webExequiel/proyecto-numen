@@ -4,7 +4,8 @@
 
 .btn.btn-primary {
   font-size: 20px;
-  background-color: #ffffffff;
+  color: #000000;
+  background-color: #008000;
   border: 0;
 }
 
