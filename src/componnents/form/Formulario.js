@@ -1,9 +1,7 @@
-import React, {useState} from 'react';
+import React from 'react';
 import { Formik, Form, Field, ErrorMessage } from "formik";
 
 const Formulario = () => {
-	const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
-
 	return (
 		<Formik
 			initialValues={{
@@ -29,16 +27,12 @@ const Formulario = () => {
 				return errores;
 
 			}}
-				
-			onSubmit={(valores, {resetForm}) => {	
-				resetForm();		
-				console.log('formulario enviado');
-				cambiarFormularioEnviado(true);
-				setTimeout(() => cambiarFormularioEnviado(false), 5000)
-			}}
-		>
+		>	
 			{( {errors} ) => (
 				<Form className='formulario'>
+					<div>
+						<h3>INGRESAR</h3>
+					</div>
 					<div>
 						<label htmlFor="usuario">Usuario</label>
 						<Field
@@ -55,27 +49,20 @@ const Formulario = () => {
 					<div>
 						<label htmlFor="contraseña">Contraseña</label>
 						<Field
-							type="text"
+							type="password"
 							name="contraseña"
-							placeholder="contraseña"
-							id="contraseña"						
+							placeholder="password"
+							id="password"						
 						/>
 						<ErrorMessage name="contraseña" component={() => (
 							<div className="error">{errors.contraseña}</div>
 						)} />
 					</div>
-
 					<div>
-						<label>
-							<Field type="radio" name="sexo" value="hombre"/> Hombre
-							</label>
-						<label>
-							<Field type="radio" name="sexo" value="mujer"/> Mujer
-							</label>
+						<button>Registrarse</button>
 					</div>
 
-					<button type="submit">Enviar</button>
-					{formularioEnviado && <p className="exito">Formulario enviado con exito!</p>}
+					<button type="submit">INGRESAR</button>
 				</Form>
 
 			)}
