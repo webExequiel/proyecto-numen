@@ -4,9 +4,7 @@ import React from 'react';
 const Button = (props) => {
   return (
 
-    // <button src={props.img} />
-
-    <button className='btn btn-primary'>
+    <button onClick={''} className='btn btn-primary'>
       <FontAwesomeIcon icon={props.icon} />
     </button>
 
