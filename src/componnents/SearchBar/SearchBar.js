@@ -10,14 +10,12 @@ const SearchBar = () => {
 
   
     const peticionGet = async () => {
-      await axios.get('http://localhost:5000')
-      .then(response=>{
-        setViandas(response);
+      const response = await axios.get('http://localhost:5000/viandas')
+      console.log(response.data)
+        setViandas(response.data)
         // setTablaViandas(response.data);
-      }).catch(error=>{
-        console.log(error);
-      })
-      }
+
+      };
 
       useEffect(()=>{
         peticionGet();
@@ -30,7 +28,7 @@ const SearchBar = () => {
       }
   
     const filtrar = (terminoBusqueda) => {
-        var resultadosBusqueda=tablaViandas.filter((viandas) => {
+        var resultadosBusqueda=viandas.filter((viandas) => {
           if (viandas.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
             return viandas;
           }
