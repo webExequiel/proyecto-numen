@@ -7,14 +7,12 @@ import Theme from './componnents/style/Theme';
 
 const App = () => {
   return (
-    <Theme>
-      <Container>
-        <Navbar />
-        <Home />
-        <h1>Carrusel</h1>
-        <CarruselComidas />
-      </Container>
-    </Theme>
+    <Container>
+      <Navbar />
+      <Home />
+      <h1>Las Viandas Mas Sanas y Deliciosas</h1>
+      <CarruselComidas />
+    </Container>
   );
 };
 
