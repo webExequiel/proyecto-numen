@@ -9,7 +9,7 @@ const App = ()=>{
     <Container>
       <Navbar/>
       <Home/>
-       <h1>Carrusel</h1>
+      <h1>Las Viandas Mas Sanas y Deliciosas</h1>
       <CarruselComidas/>
     </Container>
   );
