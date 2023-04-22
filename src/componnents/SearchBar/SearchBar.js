@@ -4,18 +4,15 @@ import axios from 'axios';
 
 const SearchBar = () => {
 
-    const [viandas, setViandas] = useState([]);
-    const [busqueda, setBusqueda] = useState('');
-    // const [tablaViandas, setTablaViandas] = useState([]);
+    const [viandas, setViandas] = useState([])
+    const [busqueda, setBusqueda] = useState('')
 
   
     const peticionGet = async () => {
-      const response = await axios.get('http://localhost:5000/viandas')
+      const response = await axios.get('http://localhost:5000/viandas');
       console.log(response.data)
-        setViandas(response.data)
-        // setTablaViandas(response.data);
-
-      };
+      setViandas(response.data)
+      }
 
       useEffect(()=>{
         peticionGet();
@@ -28,13 +25,14 @@ const SearchBar = () => {
       }
   
     const filtrar = (terminoBusqueda) => {
-        var resultadosBusqueda=viandas.filter((viandas) => {
+        var resultadosBusqueda = viandas.filter((viandas) => {
           if (viandas.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
-            return viandas;
+            return viandas
           }
-        })
-        setViandas(resultadosBusqueda);
+        }) 
+          setViandas(resultadosBusqueda);
       }
+
   return (
     <div>
         <div className='containerInput'>
@@ -46,32 +44,6 @@ const SearchBar = () => {
 
             />
         </div>
-
-        {/* <div className='table-responsive'>
-            <table className='table table-sm table-bordered'>
-                <thead>
-                    <tr>
-                    <th>ID</th>
-                    <th>NOMBRE</th>
-                    <th>PRECIO</th>
-                    <th>DESCRIPCION</th>
-                    </tr>
-                </thead>
-
-                <tbody>
-                    {Viandas &&
-                    Viandas.map((Viandas) =>(
-                    <tr key={Viandas.id}>
-                        <td>{Viandas.id}</td>
-                        <td>{Viandas.nombre}</td>
-                        <td>{Viandas.precio}</td>
-                        <td>{Viandas.descripcion}</td>
-                    </tr>
-                    ))}
-                </tbody>
-
-            </table>
-        </div> */}
     </div>
 
   )
