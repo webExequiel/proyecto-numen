@@ -1,4 +1,4 @@
-import React from 'react'
+import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
 
@@ -9,10 +9,12 @@ const SearchBar = () => {
 
   
     const peticionGet = async () => {
-      const response = await axios.get('http://localhost:5000/viandas');
+      const response = await axios.get('http://localhost:5000/viandas')
       console.log(response.data)
       setViandas(response.data)
-      }
+    }
+
+
 
       useEffect(()=>{
         peticionGet();
