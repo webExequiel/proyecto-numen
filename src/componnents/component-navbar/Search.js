@@ -5,11 +5,7 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons';
 const Search = () => {
   return (
     
-    <div>
-
-      <Button icon={faSearch} />
-
-    </div>
+    <Button icon={faSearch} />
 
   )
 }

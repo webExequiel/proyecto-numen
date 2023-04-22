@@ -5,7 +5,7 @@ import { faUser } from '@fortawesome/free-solid-svg-icons';
 const Login = () => {
   return (
 
-  <Button icon={faUser} />
+    <Button icon={faUser} />
 
   )
 }
