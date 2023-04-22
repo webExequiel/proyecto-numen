@@ -1,4 +1,6 @@
-import FormLogin from "./componnents/form/FormLogin";
+import SearchBar from "./componnents/SearchBar/SearchBar";
+
+
 
 
 
@@ -9,7 +11,7 @@ import FormLogin from "./componnents/form/FormLogin";
 function App() {
   return (
     <>
-      <FormLogin />
+    <SearchBar />
     </>
   );
   }

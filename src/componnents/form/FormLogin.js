@@ -1,6 +1,7 @@
 
 import React, {useState} from 'react';
 import { Formik, Form, Field } from "formik";
+import styled from 'styled-components';
 
 const FormLogin = () => {
 
@@ -75,6 +76,5 @@ const FormLogin = () => {
 	</Formik>
     );
 }
-
 
 export default FormLogin
