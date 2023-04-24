@@ -1,13 +1,14 @@
 import React from 'react'
+import { useState } from 'react'
 import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
-import 'bootstrap/dist/css/bootstrap.css';
+import 'bootstrap/dist/css/bootstrap.css'
 const CustomModal = () => {
-    // state={
-    //     abierto: false,
-    // }
+    state={
+        abierto: false
+    }
 
-    abrirModal = () =>{
-        this.setState({abierto:!this.state.abierto});
+    abrirModal=()=>{
+        this.setState({abierto: !this.state.abierto});
     }
   return (
     <Modal isOpen={this.state.abierto}>
