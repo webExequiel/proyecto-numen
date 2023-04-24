@@ -6,6 +6,7 @@ const SearchBar = () => {
 
     const [viandas, setViandas] = useState([])
     const [busqueda, setBusqueda] = useState('')
+    const [vianasFlitradas, setViandasFiltradas] = useState([]);
 
   
     const peticionGet = async () => {
@@ -19,23 +20,33 @@ const SearchBar = () => {
       useEffect(()=>{
         peticionGet();
       },[]);
-  
-    const handleChange=e=>{
-        setBusqueda(e.target.value);
-        filtrar(e.target.value);
-  
-      }
-  
-    const filtrar = (terminoBusqueda) => {
-        var resultadosBusqueda = viandas.filter((viandas) => {
-          if (viandas.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+
+      useEffect(() =>{
+        const resultadosBusqueda = viandas.filter((viandas) => {
+          if (viandas.name.toString().toLowerCase().includes(busqueda.toLowerCase())){
             return viandas
           }
         }) 
-          setViandas(resultadosBusqueda);
+          setViandasFiltradas(resultadosBusqueda);
+      },[busqueda, viandas])
+  
+    const handleChange=e=>{
+        setBusqueda(e.target.value);
+        // filtrar(e.target.value);
+  
       }
-
+  
+    // const filtrar = (terminoBusqueda) => {
+    //     var resultadosBusqueda = viandas.filter((viandas) => {
+    //       if (viandas.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
+    //         return viandas
+    //       }
+    //     }) 
+    //       setViandas(resultadosBusqueda);
+    //   }
+  console.log(vianasFlitradas);
   return (
+
     <div>
         <div className='containerInput'>
             <input
