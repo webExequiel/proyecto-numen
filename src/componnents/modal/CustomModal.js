@@ -1,11 +1,13 @@
 
-import React from 'react'
-import { useState } from 'react'
+import React from 'react';
+import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+
 
 const ButtonModal = ({ Body, isOpenModal, onClose}) =>{
     return (
+      <>
       <Modal isOpen={isOpenModal}>
         <ModalHeader>
           VIANDA
@@ -17,6 +19,7 @@ const ButtonModal = ({ Body, isOpenModal, onClose}) =>{
           <button onClick={onClose}>CERRAR</button>
         </ModalFooter>
       </Modal>
+      </>
   )
 }
 
