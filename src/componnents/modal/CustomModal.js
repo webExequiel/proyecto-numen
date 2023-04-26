@@ -4,32 +4,45 @@ import { useState } from 'react'
 import 'bootstrap/dist/css/bootstrap.css'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap'
 
-const CustomModal = () => {
-
-  const [isOpenModal, setisOpenModal] = useState(false);
-
-  const modalOpen = () => {
-    setisOpenModal(!isOpenModal);
-  }
-
-  return (
-
-      <><div className='principal'>
-      <div className='secundario'>
-        <Button color='success'>Mostrar Modal</Button>
-      </div>
-    </div><Modal isOpen={modalOpen}>
+const ButtonModal = ({ Body, isOpenModal, onClose}) =>{
+    return (
+      <Modal isOpen={isOpenModal}>
         <ModalHeader>
           VIANDA
         </ModalHeader>
         <ModalBody>
-          VIANDA
+          <Body />
         </ModalBody>
         <ModalFooter>
-          <button>AGREGAR</button>
-          <button onClick={!isOpenModal}>CERRAR</button>
+          <button onClick={onClose}>CERRAR</button>
         </ModalFooter>
-      </Modal></>
+      </Modal>
+  )
+}
+
+const CustomModal = () => {
+
+    const [isOpenModal, setisOpenModal] = useState(false);
+    console.log(CustomModal);
+
+    const modalOpen = () => {
+      setisOpenModal(!isOpenModal);
+    }
+
+    return (
+      <>
+        <div className='principal'>
+          <div className='secundario'>
+            <Button color='success' onClick={modalOpen}>Modal Boton NavBar</Button>
+          </div>
+        </div>
+
+        <ButtonModal
+        isOpenModal={isOpenModal}
+        Body={() => <div> Hola </div>}
+        onClose={() => setisOpenModal(false)}
+        />
+      </>
 
   )
 }
