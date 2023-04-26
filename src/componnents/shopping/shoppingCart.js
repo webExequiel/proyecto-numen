@@ -20,6 +20,7 @@ const ShoppingCart = () => {
   const clearCart = (id) => dispatch({ type: TYPES.CLEAR_CART });
   const total = state.cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
+
   return (
     <>
       <h2>Carrito de Compras</h2>

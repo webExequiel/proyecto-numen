@@ -1,6 +1,6 @@
 import './App.css';
 import ShoppingCart from './componnents/shopping/shoppingCart';
-import { SendButton } from './componnents/botonAgregarCarrito';
+
 
 function App() {
   return (
