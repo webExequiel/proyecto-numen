@@ -1,6 +1,6 @@
 import React from 'react';
 import Button from './Button';
-import { faCartShopping } from '@fortawesome/free-solid-svg-icons'
+import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
 const Cart = () => {
   return (
 
