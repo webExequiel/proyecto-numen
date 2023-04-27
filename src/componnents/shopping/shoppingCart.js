@@ -32,9 +32,11 @@ const ShoppingCart = () => {
       <div className="box">
         {cart.map((item, index) => <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />)}
       </div>
-      <button onClick={clearCart}>Limpiar Carrito</button>
-
       <div> $ {total.toFixed(2)} </div>
+      <div className="clear">
+      <button onClick={clearCart}>Limpiar Carrito</button>
+      </div>
+      
     </>
   );
 };
