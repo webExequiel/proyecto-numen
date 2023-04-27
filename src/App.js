@@ -1,10 +1,11 @@
-import Cart from "./componnents/component-navbar/Cart";
+import Button from "./componnents/component-navbar/Button";
+
 
 
 function App() {
   return (
     <>
-    <Cart />
+    <Button />
     </>
   );
   }

@@ -1,7 +1,6 @@
 import React from 'react';
 import Button from './Button';
 import { faCartShopping } from '@fortawesome/free-solid-svg-icons';
-import styled from 'styled-components';
 const Cart = () => {
   return (
 
@@ -9,8 +8,5 @@ const Cart = () => {
 
   )
 }
-
-const Button = styled.button`
-color: #008000;`
 
 export default Cart
