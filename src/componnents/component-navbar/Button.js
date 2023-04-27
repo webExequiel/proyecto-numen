@@ -7,7 +7,7 @@ const Button = (props) => {
       <FontAwesomeIcon icon={props.icon} />
     </button>
 
-  );
+  )
 }
 
-export default Button
+export default Button;
