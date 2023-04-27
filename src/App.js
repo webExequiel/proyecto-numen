@@ -1,9 +1,10 @@
-import CustomModal from "./componnents/modal/CustomModal";
+import Cart from "./componnents/component-navbar/Cart";
+
 
 function App() {
   return (
     <>
-    <CustomModal />
+    <Cart />
     </>
   );
   }
