@@ -1,13 +1,15 @@
-import Button from "./componnents/component-navbar/Button";
-
+import SearchBar from "./componnents/SearchBar/SearchBar";
+import CustomModal from "./componnents/modal/CustomModal";
 
 
 function App() {
   return (
+
     <>
-    <Button />
+    <SearchBar />
     </>
+
   );
-  }
+}
 
 export default App;

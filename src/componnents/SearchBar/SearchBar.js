@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import axios from 'axios';
+import CustomModal from '../modal/CustomModal';
 
 const SearchBar = () => {
 
@@ -32,22 +33,11 @@ const SearchBar = () => {
   
     const handleChange=e=>{
         setBusqueda(e.target.value);
-        // filtrar(e.target.value);
-  
       }
   
-    // const filtrar = (terminoBusqueda) => {
-    //     var resultadosBusqueda = viandas.filter((viandas) => {
-    //       if (viandas.name.toString().toLowerCase().includes(terminoBusqueda.toLowerCase())){
-    //         return viandas
-    //       }
-    //     }) 
-    //       setViandas(resultadosBusqueda);
-    //   }
   console.log(vianasFlitradas);
   return (
-
-    <div>
+      <div>
         <div className='containerInput'>
             <input
             className='form-control inputBuscar'
@@ -57,7 +47,8 @@ const SearchBar = () => {
 
             />
         </div>
-    </div>
+      </div>
+    
 
   )
 }

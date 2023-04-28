@@ -3,6 +3,7 @@ import React from 'react';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import SearchBar from '../SearchBar/SearchBar';
 
 
 const ButtonModal = ({ Body, isOpenModal, onClose}) =>{
@@ -42,7 +43,7 @@ const CustomModal = () => {
 
         <ButtonModal
         isOpenModal={isOpenModal}
-        Body={() => <div> Hola </div>}
+        Body={SearchBar}
         onClose={() => setisOpenModal(false)}
         />
       </>
