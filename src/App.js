@@ -1,16 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navbar from './Navbar';
+/* import Navbar from './Navbar';
 import Home from './Home';
-import CarruselComidas from "./componnents/Carrusel";
+import CarruselComidas from "./componnents/Carrusel"; */
+import ShoppingCart from './componnents/shopping/shoppingCart';
 
 const App = () => {
   return (
     <Container>
-      <Navbar />
+      <ShoppingCart />
+      {/*<Navbar />
       <Home />
       <h1>Las Viandas Mas Sanas y Deliciosas</h1>
-      <CarruselComidas />
+       <CarruselComidas />  */}
     </Container>
   );
 };

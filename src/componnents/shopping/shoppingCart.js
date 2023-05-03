@@ -5,7 +5,7 @@ import Product from "./producto";
 import CartItem from "./cartItem";
 
 const ShoppingCart = () => {
-
+  /*  const viandas = useContext(ViandasContext); */
   const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
   const { products, cart } = state;
 
@@ -34,9 +34,9 @@ const ShoppingCart = () => {
       </div>
       <div> $ {total.toFixed(2)} </div>
       <div className="clear">
-      <button onClick={clearCart}>Limpiar Carrito</button>
+        <button onClick={clearCart}>Limpiar Carrito</button>
       </div>
-      
+
     </>
   );
 };
