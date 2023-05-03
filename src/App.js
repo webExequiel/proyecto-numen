@@ -1,40 +1,25 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navbar from './componnents/Navbar';
-import Home from './componnents/Home';
-import CarruselComidas from "./componnents/Carrusel";
-import Theme from './componnents/style/Theme';
-import ViandaCard from './componnents/viandaCard/ViandaCard';
-import ViandasContextProvider from './context/ViandasContextProvider';
+/* import Navbar from './Navbar';
+import Home from './Home';
+import CarruselComidas from "./componnents/Carrusel"; */
+import ShoppingCart from './componnents/shopping/shoppingCart';
 
 const App = () => {
   return (
-    <ViandasContextProvider>
-      <Theme>
-        <Container>
-          <div style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
-            height: "100vh"
-          }}
-          >
-            <ViandaCard />
-          </div>
-
-          {/*   <Navbar />
-        <Home />
-
-        <CarruselComidas /> */}
-        </Container >
-      </Theme>
-    </ViandasContextProvider>
+    <Container>
+      <ShoppingCart />
+      {/*<Navbar />
+      <Home />
+      <h1>Las Viandas Mas Sanas y Deliciosas</h1>
+       <CarruselComidas />  */}
+    </Container>
   );
 };
 
 const Container = styled.div` 
-background:#FAF9F6;
-height: 100vh;
+  background:#FAF9F6;
+  height: 100vh;
 `;
 
 export default App;
