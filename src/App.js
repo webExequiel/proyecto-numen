@@ -4,15 +4,31 @@ import Navbar from './componnents/Navbar';
 import Home from './componnents/Home';
 import CarruselComidas from "./componnents/Carrusel";
 import Theme from './componnents/style/Theme';
+import ViandaCard from './componnents/viandaCard/ViandaCard';
+import ViandasContextProvider from './context/ViandasContextProvider';
 
 const App = () => {
   return (
-    <Container>
-      <Navbar />
-      <Home />
-      <h1>Las Viandas Mas Sanas y Deliciosas</h1>
-      <CarruselComidas />
-    </Container>
+    <ViandasContextProvider>
+      <Theme>
+        <Container>
+          <div style={{
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+            height: "100vh"
+          }}
+          >
+            <ViandaCard />
+          </div>
+
+          {/*   <Navbar />
+        <Home />
+
+        <CarruselComidas /> */}
+        </Container >
+      </Theme>
+    </ViandasContextProvider>
   );
 };
 

@@ -59,7 +59,7 @@ color: white;
 text-decoration:none;
 margin-right: 1rem;
 cursor: pointer;
-font-family: Caveat;
+font-family: ${props => props.theme.fonts.titleFont};
 font-size: 20px;
 
 &:hover{
