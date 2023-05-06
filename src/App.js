@@ -1,21 +1,23 @@
 import React from 'react'
 import styled from 'styled-components'
-import Navbar from './Navbar';
+/* import Navbar from './Navbar';
 import Home from './Home';
-import CarruselComidas from "./componnents/Carrusel";
+import CarruselComidas from "./componnents/Carrusel"; */
+import ShoppingCart from './componnents/shopping/shoppingCart';
 
-const App = ()=>{
- return (
+const App = () => {
+  return (
     <Container>
-      <Navbar/>
-      <Home/>
+      <ShoppingCart />
+      {/*<Navbar />
+      <Home />
       <h1>Las Viandas Mas Sanas y Deliciosas</h1>
-      <CarruselComidas/>
+       <CarruselComidas />  */}
     </Container>
   );
 };
 
-const Container = styled.div ` 
+const Container = styled.div` 
   background:#FAF9F6;
   height: 100vh;
 `;
