@@ -1,44 +1,61 @@
 import { TYPES, removeAllProducts, removeOneProduct } from "../../actions/shoppingActions";
-import { useReducer } from "react";
+import { useContext, useReducer } from "react";
 import { shoppingInitialState, shoppingReducer } from "../../reducer/shoppingReducer";
 import Product from "./producto";
 import CartItem from "./cartItem";
+import { ViandasContext } from "../../context/ViandasContextProvider";
+import styled from 'styled-components';
 
 const ShoppingCart = () => {
-  /*  const viandas = useContext(ViandasContext); */
-  const [state, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
-  const { products, cart } = state;
+  const { cart, products } = useContext(ViandasContext);
 
-  const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id });
-  const deleteFromCart = (id, all = false) => {
-    if (all) {
-      dispatch(removeAllProducts(id));
-    } else {
-      dispatch(removeOneProduct(id));
-    }
-  }
-  const clearCart = (id) => dispatch({ type: TYPES.CLEAR_CART });
-  const total = state.cart.reduce((acc, item) => acc + item.price * item.quantity, 0);
-
+  const total = cart.items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
   return (
     <>
-      <h2>Carrito de Compras</h2>
-      <h3>Productos</h3>
+      <Title>Carrito de Compras</Title>
+      <Title2>Productos</Title2>
       <div className="box grid-responsive">
-        {products.map((product) => <Product key={product.id} data={product} addToCart={addToCart} />)}
+        {products.items.map((product) => <Product
+          key={product.id}
+          data={product}
+          addToCart={cart.addToCart}
+        />)}
       </div>
-      <h3>Carrito</h3>
+      <SubTitle>Carrito</SubTitle>
       <div className="box">
-        {cart.map((item, index) => <CartItem key={index} data={item} deleteFromCart={deleteFromCart} />)}
+        {cart.items.map((item, index) => <CartItem
+          key={index}
+          data={item}
+          deleteFromCart={cart.deleteFromCart}
+        />)}
       </div>
       <div> $ {total.toFixed(2)} </div>
       <div className="clear">
-        <button onClick={clearCart}>Limpiar Carrito</button>
+        <Button onClick={cart.clearCart}>Limpiar Carrito</Button>
       </div>
 
     </>
   );
 };
+const Title = styled.h1`
+font-family: ${props => props.theme.fonts.titleFont};
+color: ${props => props.theme.colors.importantTxt};
+`;
+const Title2 = styled.h1`
+font-family: ${props => props.theme.fonts.titleFont};
+color: ${props => props.theme.colors.simpleTitle};
+`;
+
+const SubTitle = styled.h2`
+font-family: ${props => props.theme.fonts.titleFont};
+color: ${props => props.theme.colors.simpleTitle};
+`;
+
+const Button = styled.button`
+font-family: ${props => props.theme.fonts.normalFont};
+color: white;
+`;
+
 
 export default ShoppingCart;

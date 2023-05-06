@@ -2,10 +2,10 @@ import { ThemeProvider } from "styled-components"
 
 const generalTheme = {
     colors: {
-        darkerbg: '#222',
-        lighterbg: '#444',
-        importantTxt: '#fff',
-        simpleTxt: '#ddd',
+        darkerbg: '#ddd',
+        importantTxt: 'green',
+        simpleTitle: '#A0A09D',
+        simpleTxt: 'black',
     },
     fonts: {
         titleFont: 'Caveat',
@@ -14,7 +14,7 @@ const generalTheme = {
     fontSizes: {
         small: '1.0rem',
         medium: '1.5rem',
-        large: '3rem',
+        large: '5rem',
     },
     fontWeigth: {
         light: 100,

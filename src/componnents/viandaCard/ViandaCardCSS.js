@@ -12,7 +12,6 @@ const gradient = degs => css`
 
 export const Card = styled.div`
     overflow: hidden;
-    width: 300px;
     padding: 1rem;
     border-radius: 0.5rem;
     ${gradient()};

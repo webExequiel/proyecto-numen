@@ -1,28 +1,49 @@
-import { createContext, useContext, useState } from "react"
+import { createContext, useEffect, useReducer } from "react"
 import axios from 'axios';
+import { TYPES, removeAllProducts, removeOneProduct, setProducts } from "../actions/shoppingActions";
+import { shoppingReducer, shoppingInitialState } from "../reducer/shoppingReducer";
 
 
 export const ViandasContext = createContext();
 
 const ViandasContextProvider = ({ children }) => {
 
-    const [viandas, setViandas] = useState([]);
+    const [{ cart, products }, dispatch] = useReducer(shoppingReducer, shoppingInitialState);
+    const addToCart = (id) => dispatch({ type: TYPES.ADD_TO_CART, payload: id });
+    const deleteFromCart = (id, all = false) => {
+        if (all) {
+            // dispatch({ type: TYPES.REMOVE_ALL_PRODUCTS, payload: id })
+            dispatch(removeAllProducts(id));
+        } else {
+            dispatch(removeOneProduct(id));
+        }
+    }
+    const clearCart = (id) => dispatch({ type: TYPES.CLEAR_CART });
 
-    const [vianda2, setVianda2] = useState();
 
     useEffect(() => {
         const getData = async () => {
             const res = await axios.get("http://localhost:3001/viandas");
-
-            setViandas(res.data);
+            // dispatch({ type: TYPES.SET_PRODUCTS, payload: res.datz })
+            dispatch(setProducts(res.data));
         }
-        getData()
+        getData();
     }, []);
 
 
     return (
-
-        <ViandasContext.Provider value={viandas}>
+        <ViandasContext.Provider
+            value={{
+                products: {
+                    items: products,
+                },
+                cart: {
+                    items: cart,
+                    addToCart,
+                    deleteFromCart,
+                    clearCart,
+                },
+            }}>
             {children}
         </ViandasContext.Provider>
     )

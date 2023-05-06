@@ -1,10 +1,10 @@
 import { Card } from './ViandaCardCSS';
 
-const ViandaCard = ({ image }) => {
 
+const ViandaCard = ({ image }) => {
     return (
         <Card>
-            <img src={image} alt="imagen" />
+            <img src={image && require(`../../imagenes/${image}`)} alt="imagen" />
         </Card>
     )
 }
