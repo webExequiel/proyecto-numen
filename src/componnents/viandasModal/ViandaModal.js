@@ -1,82 +1,35 @@
-import axios from 'axios';
-import { useState } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import 'bootstrap/dist/css/bootstrap.css';
+import ViandaCard from '../viandaCard/ViandaCard';
+import styled from 'styled-components';
 
-
-const CustomModal = ({ Body, isOpenModal, onClose }) => {
+const CustomModal = ({ onClose, image }) => {
     return (
-        <Modal isOpen={isOpenModal}>
-            <ModalHeader>
+        <Modal isOpen={image}>
+            <StyleModalHeader>
                 VIANDA
-            </ModalHeader>
+            </StyleModalHeader>
             <ModalBody>
-                <Body />
+                <ViandaCard image={image} />
             </ModalBody>
             <ModalFooter>
-                <Button>AGREGAR</Button>
-                <Button onClick={onClose}>CERRAR</Button>
+                <ModalButton onClick={onClose}>CERRAR</ModalButton>
             </ModalFooter>
         </Modal>
     )
 }
 
-const ViandaModal = () => {
+const StyleModalHeader = styled(ModalHeader)`
+font-family: ${props => props.theme.fonts.titleFont};
+color: ${props => props.theme.colors.importantTxt};
+margin: 20px;
+`;
 
-    const [isOpenModal, setisOpenModal] = useState(false);
+const ModalButton = styled(Button)`
+font-family: ${props => props.theme.fonts.normalFont};
+color: white;
+background-color: green;
+margin: 20px;
+font-weight: 600;
+`;
 
-    const modalOpen = () => {
-        setisOpenModal(!isOpenModal);
-    }
-    return (
-        <>
-            <div className='primary'>
-                <div className='secundary'>
-                    <Button color='success' onClick={modalOpen}>Mostrar boton</Button>
-                </div>
-            </div>
-
-            <CustomModal
-                isOpenModal={isOpenModal}
-                Body={() => <div> Hola </div>}
-                onClose={() => setisOpenModal(false)}
-            />
-            <div className='primary'>
-                <div className='secundary'>
-                    <Button color='success' onClick={modalOpen}>Mostrar boton</Button>
-                </div>
-            </div>
-
-            <CustomModal
-                isOpenModal={isOpenModal}
-                Body={() => <div> chau </div>}
-                onClose={() => setisOpenModal(false)}
-            />
-        </>
-    )
-}
-
-/*  const [viandas, setViandas] = useState([]);
-
-    const [vianda, setVianda] = useState();
-
-    useEffect(() => {
-        const getData = async () => {
-            const res = await axios.get("http://localhost:3001/viandas");
-
-            setViandas(res.data);
-        }
-
-        getData()
-    }, []);
-
-    return (
-        <div>
-            <ViandasModal
-                show={!!vianda}
-                {...vianda}
-            />
-            <button onClick={() => setVianda(viandas[0])} > test </button>
-        </div>
-         */
-export default ViandaModal
+export default CustomModal

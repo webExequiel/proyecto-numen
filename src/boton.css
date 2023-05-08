@@ -7,8 +7,8 @@
     height: 40px;
     padding: 0 11px;
     border: 0;
-    border-radius: 28px;
-    font-family: "Euclid Circular A";
+    border-radius: 17px !important;
+    font-family: "Lato" !important;
     color: #f7f7f7;
     background: green;
     cursor: pointer;
@@ -17,7 +17,7 @@
   .text {
     display: flex;
     white-space: nowrap;
-    font-size: 13px;
+    font-size: 15px;
     font-weight: 600;
   }
 

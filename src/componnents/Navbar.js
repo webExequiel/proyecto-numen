@@ -15,9 +15,9 @@ const Navbar = () => {
         <span />
       </Hamburg>
       <Menu isOpen={isOpen}>
-        <MenuLink href=''>Home</MenuLink>
+        <MenuLink href='/'>Home</MenuLink>
         <MenuLink href=''>Nosotros</MenuLink>
-        <MenuLink href=''>Nuestros Productos</MenuLink>
+        <MenuLink href='/productos'>Nuestros Productos</MenuLink>
         <MenuLink href=''>Contacto</MenuLink>
 
       </Menu>
@@ -60,7 +60,7 @@ text-decoration:none;
 margin-right: 1rem;
 cursor: pointer;
 font-family: ${props => props.theme.fonts.titleFont};
-font-size: 20px;
+font-size: 25px;
 
 &:hover{
   color:yellow;

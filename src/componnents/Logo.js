@@ -14,7 +14,7 @@ const Img1 = styled.img`
   margin-top:0.5%;
   border-radius: 4px;
   padding: 5px;
-  width: 100px;
-  height: 100px;`
+  width: 90px;
+  height: 90px;`
   ;
 export default Logo

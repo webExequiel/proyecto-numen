@@ -16,6 +16,10 @@ body {
   box-shadow: 0 0 1rem #00000025 inset;
 }
 
+.total {
+  margin: 20px;
+}
+
 .grid-responsive {
   display: grid;
   grid-auto-flow: row;

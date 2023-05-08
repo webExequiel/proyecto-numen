@@ -1,10 +1,14 @@
 import { Card } from './ViandaCardCSS';
 
 
-const ViandaCard = ({ image }) => {
+const ViandaCard = ({ image, setModalImage }) => {
     return (
         <Card>
-            <img src={image && require(`../../imagenes/${image}`)} alt="imagen" />
+            <img
+                onClick={() => setModalImage(image)}
+                src={image && require(`../../imagenes/${image}`)}
+                alt="imagen"
+            />
         </Card>
     )
 }

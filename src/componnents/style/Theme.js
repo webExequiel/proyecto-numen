@@ -19,7 +19,7 @@ const generalTheme = {
     fontWeigth: {
         light: 100,
         normal: 300,
-        bold: 500,
+        bold: 600,
     },
     box: {
         boxSizing: 'border-box',

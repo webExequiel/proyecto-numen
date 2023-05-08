@@ -3,19 +3,6 @@ import styled from 'styled-components';
 import ViandaCard from "../viandaCard/ViandaCard";
 import { Col, Row } from "reactstrap";
 
-const images =
-    [
-        'burger',
-        'empanadas',
-        'grillados',
-        'ensaladaFrutas',
-        'barraCereal',
-        'hamburger',
-        'pasta',
-        'pizzaVerde',
-        'rollVegano',
-        'jugos'
-    ]
 
 const CartItem = ({ data, deleteFromCart }) => {
     const { id, name, price, quantity, image } = data;
@@ -30,8 +17,8 @@ const CartItem = ({ data, deleteFromCart }) => {
                 <h5>${price} x {quantity} = $ {price * quantity}</h5>
             </Col>
             <Col md={2} >
-                <button onClick={() => deleteFromCart(id)}>Eliminar Uno</button>
-                <button onClick={() => deleteFromCart(id, true)}>Eliminar Todos</button>
+                <Button onClick={() => deleteFromCart(id)}>Eliminar Uno</Button>
+                <Button onClick={() => deleteFromCart(id, true)}>Eliminar Todos</Button>
             </Col>
         </Row>
     );
@@ -40,6 +27,13 @@ const CartItem = ({ data, deleteFromCart }) => {
 const Title = styled.h5`
 font-family: ${props => props.theme.fonts.normalFont};
 `;
+const Button = styled.button`
+font-family: ${props => props.theme.fonts.normalFont};
+color: white;
+margin: 20px;
+font-weight: 600;
+`;
+
 
 export default CartItem;
 

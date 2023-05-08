@@ -4,26 +4,13 @@ import ViandaCard from "../viandaCard/ViandaCard";
 import styled from 'styled-components';
 import { Card } from "reactstrap";
 
-const images =
-    [
-        'burger',
-        'empanadas',
-        'grillados',
-        'ensaladaFrutas',
-        'barraCereal',
-        'hamburger',
-        'pasta',
-        'pizzaVerde',
-        'rollVegano',
-        'jugos'
-    ]
 
-const Product = ({ data, addToCart }) => {
+const Product = ({ data, addToCart, setModalImage }) => {
     const { id, name, price, image } = data;
 
     return (
         <StyledCard>
-            <ViandaCard image={image} />
+            <ViandaCard image={image} setModalImage={setModalImage} />
             <Title>{name}</Title>
             <h5>${price}</h5>
             <button onClick={() => addToCart(id)}><SendButton /></button>
@@ -41,7 +28,5 @@ font-family: ${props => props.theme.fonts.normalFont};
 color: ${props => props.theme.colors.simpleTxt};
 `;
 
-
-/*  */
 
 export default Product;
