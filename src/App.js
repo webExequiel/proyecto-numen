@@ -1,19 +1,20 @@
 import React from 'react'
 import styled from 'styled-components'
-/* import Navbar from './Navbar';
-import Home from './Home';
-import CarruselComidas from "./componnents/Carrusel"; */
-import ShoppingCart from './componnents/shopping/shoppingCart';
+import ViandasContextProvider from './context/ViandasContextProvider';
+import Theme from './componnents/style/Theme';
+import Rutas from './componnents/routes/Rutas'
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
   return (
-    <Container>
-      <ShoppingCart />
-      {/*<Navbar />
-      <Home />
-      <h1>Las Viandas Mas Sanas y Deliciosas</h1>
-       <CarruselComidas />  */}
-    </Container>
+    <Theme>
+      <ViandasContextProvider>
+        <Container>
+          <Rutas />
+        </Container>
+      </ViandasContextProvider>
+    </Theme>
   );
 };
 

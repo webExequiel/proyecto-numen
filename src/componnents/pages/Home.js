@@ -1,15 +1,17 @@
 import React from 'react';
 import styled from 'styled-components';
-import Delicioso from './assets/imagen.jpg'
+import Delicioso from '../../assets/img/imagen.jpg';
+import CarruselComidas from '../Carrusel';
 
 const Home = () => {
   return (
     <>
-    <Imagen src= {Delicioso} alt ="homeimage"/>    
+      <Imagen src={Delicioso} alt="homeimage" />
+      <CarruselComidas />
     </>
   )
 }
-const Imagen=styled.img`
+const Imagen = styled.img`
 flex-direction:column;
 height: 70%;
 width: 100%;

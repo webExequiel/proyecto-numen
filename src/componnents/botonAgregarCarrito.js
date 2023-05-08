@@ -18,7 +18,7 @@ export const SendButton = () => {
       onClick={handleClick}
       className={isSending || isSent ? "sending" : ""}
     >
-      <span className="material-symbols-outlined">
+      <span className="material-symbols-outlined m-2">
         {isSent ? "check" : "send"}
       </span>
       <span className="text">
