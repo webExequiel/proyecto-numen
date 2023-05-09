@@ -2,15 +2,16 @@ import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import ViandaCard from '../viandaCard/ViandaCard';
 import styled from 'styled-components';
 
-const CustomModal = ({ onClose, image }) => {
+const CustomModal = ({ onClose, product }) => {
     return (
-        <Modal isOpen={image}>
+        <Modal isOpen={product}>
             <StyleModalHeader>
-                VIANDA
+                {product?.name.toUpperCase()}
             </StyleModalHeader>
-            <ModalBody>
-                <ViandaCard image={image} />
-            </ModalBody>
+            <StyleModalBody >
+                <ViandaCard image={product?.image} />
+                {product?.description}
+            </StyleModalBody>
             <ModalFooter>
                 <ModalButton onClick={onClose}>CERRAR</ModalButton>
             </ModalFooter>
@@ -21,6 +22,14 @@ const CustomModal = ({ onClose, image }) => {
 const StyleModalHeader = styled(ModalHeader)`
 font-family: ${props => props.theme.fonts.titleFont};
 color: ${props => props.theme.colors.importantTxt};
+font-weight: ${props => props.theme.fontWeigth.bold};
+margin: 20px;
+`;
+
+const StyleModalBody = styled(ModalBody)`
+font-family: ${props => props.theme.fonts.normalFont};
+color: ${props => props.theme.colors.simpleTxt};
+
 margin: 20px;
 `;
 

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 
 import Logo from './Logo';
@@ -15,11 +16,10 @@ const Navbar = () => {
         <span />
       </Hamburg>
       <Menu isOpen={isOpen}>
-        <MenuLink href='/'>Home</MenuLink>
-        <MenuLink href=''>Nosotros</MenuLink>
-        <MenuLink href='/productos'>Nuestros Productos</MenuLink>
-        <MenuLink href=''>Contacto</MenuLink>
-
+        <MenuLink to='/'>Home</MenuLink>
+        <MenuLink to=''>Nosotros</MenuLink>
+        <MenuLink to='/productos'>Nuestros Productos</MenuLink>
+        <MenuLink to=''>Contacto</MenuLink>
       </Menu>
     </Nav>
   )
@@ -53,7 +53,7 @@ span {
 }
 
 `;
-const MenuLink = styled.a`
+const MenuLink = styled(NavLink)`
 padding:1rem 2rem;
 color: white;
 text-decoration:none;

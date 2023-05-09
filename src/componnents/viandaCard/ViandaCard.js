@@ -1,11 +1,11 @@
 import { Card } from './ViandaCardCSS';
 
 
-const ViandaCard = ({ image, setModalImage }) => {
+const ViandaCard = ({ image, setModalProduct }) => {
     return (
         <Card>
             <img
-                onClick={() => setModalImage(image)}
+                onClick={setModalProduct}
                 src={image && require(`../../imagenes/${image}`)}
                 alt="imagen"
             />
