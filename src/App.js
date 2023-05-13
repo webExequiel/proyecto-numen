@@ -4,6 +4,7 @@ import ViandasContextProvider from './context/ViandasContextProvider';
 import Theme from './componnents/style/Theme';
 import Rutas from './componnents/routes/Rutas'
 
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const App = () => {
@@ -15,6 +16,10 @@ const App = () => {
         </Container>
       </ViandasContextProvider>
     </Theme>
+    
+    
+    
+
   );
 };
 
