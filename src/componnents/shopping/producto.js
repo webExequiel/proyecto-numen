@@ -5,15 +5,18 @@ import styled from 'styled-components';
 import { Card } from "reactstrap";
 
 
-const Product = ({ data, addToCart, setModalImage }) => {
+const Product = ({ data, addToCart, setModalProduct }) => {
     const { id, name, price, image } = data;
 
     return (
         <StyledCard>
-            <ViandaCard image={image} setModalImage={setModalImage} />
+            <ViandaCard
+                image={image}
+                setModalProduct={() => setModalProduct(data)}
+            />
             <Title>{name}</Title>
-            <h5>${price}</h5>
-            <button onClick={() => addToCart(id)}><SendButton /></button>
+            <Price>${price}</Price>
+            <Button onClick={() => addToCart(id)}><SendButton /></Button>
         </StyledCard>
     )
 };
@@ -26,7 +29,20 @@ const StyledCard = styled(Card)`
 const Title = styled.h5`
 font-family: ${props => props.theme.fonts.normalFont};
 color: ${props => props.theme.colors.simpleTxt};
+margin-bottom: 77px;
 `;
 
+const Price = styled.h5`
+font-family: ${props => props.theme.fonts.normalFont};
+color: ${props => props.theme.colors.simpleTxt};
+font-weight: ${props => props.theme.fontWeigth.bold};
+margin-bottom: 45px;
+position: absolute;
+bottom: 10px; 
+`;
 
+const Button = styled.button`
+position: absolute;
+bottom: 10px; 
+`;
 export default Product;

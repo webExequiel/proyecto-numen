@@ -32,6 +32,8 @@ font-family: ${props => props.theme.fonts.normalFont};
 color: white;
 margin: 20px;
 font-weight: 600;
+height: 40px;
+padding: 0 22px;
 `;
 
 

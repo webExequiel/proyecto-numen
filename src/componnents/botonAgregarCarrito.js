@@ -21,7 +21,7 @@ export const SendButton = () => {
       <span className="material-symbols-outlined m-2">
         {isSent ? "check" : "send"}
       </span>
-      <span className="text">
+      <span className="text m-2">
         {isSending ? "Agregando ..." : isSent ? "Agregado" : "Agregar al Carrito"}
       </span>
     </button>

@@ -60,7 +60,9 @@ const OwlCarouselWrapper = styled.div`
 
 const Title = styled.h1`
 font-family: ${props => props.theme.fonts.titleFont};
-color: ${props => props.theme.colors.importantTxt};
+background: linear-gradient(#fdfc47,green);
+-webkit-background-clip: text;
+color: transparent; 
 margin: 37px;
 `;
 
