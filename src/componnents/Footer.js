@@ -50,6 +50,7 @@ margin-bottom: 30px;
 font-weight: 500;
 position:relative;
 font-family: 'Hammersmith One', sans-serif;
+box-shadow : 2px;
 &:before{
   content: '';
   position:absolute;
@@ -115,10 +116,10 @@ display : flex;
 justify-content: center;
 align-items: center;
 text-decoration: none;
-color: #1CA12D;
+color:#25C306;
 border-color: #fff;
 font-size: 2em;
-border: 1px solid rgba(255,255,255,.4);
+
 border-right: 1px solid rgba (255,255,255, .2);
 border-bottom: 1px solid rgba (255,255,255, .2);
 box-shadow: 0 5px 45px rgba (0,0,0, .1);
@@ -127,32 +128,21 @@ transition : .5s;
 overflow: hidden;
 margin-left: 15px;
 &:hover{
-  color:#ffffff;
-  background-color: #bbbbbb;
+  color:#357401;
+  background-color: yellow;
 }
 
 `
-
-
-
-
-
 const Footer = () => {
     return (
-      
       <footer>
         <Body>
-      
-      
-      <Controw className="respond" >
+          <Controw className="respond" >
        
           <div className="Logo">
           <IMG src={Vegan} />
         </div>
-
-        
-        
-        <Contlinks className="footer-links">
+             <Contlinks className="footer-links">
        
                   <Listfooter className="">
                   <H4>Nosotros</H4>
@@ -170,36 +160,19 @@ const Footer = () => {
                     <li><A href="">Flores, Buenos Aires</A></li>
                     </List>
                   </Listfooter>
-
-                 
-                
-           
-      
-    
-        <Listfooter>
+       <Listfooter>
         <H4> Sigamos conectados</H4>
         <Redes className="Redes">
           <A2 href=""><FontAwesomeIcon icon= {faFacebook}/></A2>
           <A2 href=""><FontAwesomeIcon icon= {faTwitter}/></A2>
           <A2 href=""><FontAwesomeIcon icon= {faInstagram}/></A2>
           <A2 href=""><FontAwesomeIcon icon= {faLinkedin}/></A2>
-             
-             
-            
-            
-          </Redes>
+             </Redes>
       </Listfooter>
       </Contlinks>
-     
-   
-   </Controw>
+     </Controw>
   
-   
-
-        
-        
-        
-        <MetPag className="metodo-pago">
+  <MetPag className="metodo-pago">
 
         <div className="met">
         <h2 className="estilomet"><h2>Metodo de pago</h2></h2>
@@ -238,30 +211,7 @@ const Footer = () => {
           </div>
           </Body>
     </footer>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-        
-    )
-      
- 
-  };
+) };
   
   
   
