@@ -13,7 +13,7 @@ const Rutas = () => {
                 <Route path='/productos' element={<ShoppingCart />} />
                 {/* <Route path='/login'/> */}
             </Routes>
-            {  <Footer/> }
+            {  /*<Footer/> */}
         </Router>
     )
 }
