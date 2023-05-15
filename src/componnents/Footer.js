@@ -11,6 +11,7 @@ import  American    from '../imagenes/american.png'
 import   MerPag   from '../imagenes/logo-mercadopago.jpg'
 
 
+
 const Body = styled.div`
 
 padding: 50px 0 0 0;
