@@ -1,0 +1,106 @@
+  button {
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 40px;
+    padding: 0 11px;
+    border: 0;
+    border-radius: 17px !important;
+    font-family: "Lato" !important;
+    color: #f7f7f7;
+    background: green;
+    cursor: pointer;
+  }
+
+  .text {
+    display: flex;
+    white-space: nowrap;
+    font-size: 15px;
+    font-weight: 600;
+  }
+
+  .icon {
+    font-size: 30px;
+  }
+
+  button.sending .text {
+    animation: textAnimation 1s both;
+  }
+
+  button.sending .icon {
+    animation: iconAnimation 1s both;
+  }
+
+  @keyframes textAnimation {
+
+    0%,
+    30% {
+      translate: 0 0;
+    }
+
+    39.9% {
+      translate: 0 100px;
+    }
+
+    40% {
+      translate: 300px 100px;
+    }
+
+    40.1% {
+      translate: 300px -60px;
+    }
+
+    40.2% {
+      translate: 33px -60px;
+    }
+
+    45% {
+      translate: 33px 0;
+    }
+
+    95% {
+      translate: 33px 0;
+    }
+
+    100% {
+      translate: 0 0;
+    }
+  }
+
+  @keyframes iconAnimation {
+
+    0%,
+    5% {
+      translate: 0 0;
+    }
+
+    20%,
+    30% {
+      translate: -250px 0;
+    }
+
+    40% {
+      translate: 200px 0;
+      scale: 2;
+    }
+
+    40.1% {
+      translate: 200px -60px;
+      scale: 1;
+    }
+
+    40.2% {
+      translate: 34px -60px;
+    }
+
+    45%,
+    95% {
+      translate: 34px 0;
+    }
+
+    100% {
+      translate: 0 0;
+    }
+  }

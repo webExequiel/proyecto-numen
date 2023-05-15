@@ -1,14 +1,21 @@
 import ModalForm from './componnents/modal/ModalForm';
 
-function App() {
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+const App = () => {
   return (
-<>
+    <>
 
-  <ModalForm />
+      <ModalForm />
 
-</>
+    </>
 
   );
-}
+};
+
+/* const Container = styled.div` 
+  background:#FAF9F6;
+  height: 100vh;
+`; */
 
 export default App;

@@ -33,7 +33,7 @@
 	color: #ffffff;
 }
 
-.formulario > div {
+.formulario>div {
 	margin-bottom: 20px;
 }
 
@@ -43,7 +43,7 @@
 	font-size: 14px;
 	margin-bottom: 5px;
 	color: #ffffff;
-  	background-color: #357401;
+	background-color: #357401;
 }
 
 .formulario input,
@@ -88,7 +88,7 @@
 
 .formulario button[type="submit"]:hover {
 	background: #357401;
-  	color: #9FC539;
+	color: #9FC539;
 }
 
 .formulario .exito {
@@ -112,5 +112,3 @@
 	border-radius: 5px;
 	border: 0;
 }
-
-
