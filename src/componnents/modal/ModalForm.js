@@ -1,10 +1,10 @@
-
 import React from 'react';
 import { useState } from 'react';
 import 'bootstrap/dist/css/bootstrap.css'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
-import SearchBar from '../SearchBar/SearchBar';
-
+import { Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faComment } from '@fortawesome/free-solid-svg-icons';
+import Forms from '../form/Forms';
 
 const ButtonModal = ({ Body, isOpenModal, onClose}) =>{
     return (
@@ -14,7 +14,7 @@ const ButtonModal = ({ Body, isOpenModal, onClose}) =>{
           VIANDA
         </ModalHeader>
         <ModalBody>
-          <Body />
+          <Body/>
         </ModalBody>
         <ModalFooter>
           <button onClick={onClose}>CERRAR</button>
@@ -24,8 +24,7 @@ const ButtonModal = ({ Body, isOpenModal, onClose}) =>{
   )
 }
 
-const CustomModal = () => {
-
+const ModalForm = () => {
     const [isOpenModal, setisOpenModal] = useState(false);
     console.log(CustomModal);
 
@@ -37,24 +36,19 @@ const CustomModal = () => {
       <>
         <div className='principal'>
           <div className='secundario'>
-            <Button color='success' onClick={modalOpen}>Modal Boton NavBar</Button>
+            <button className='btn btn-primary' onClick={modalOpen}>
+              <FontAwesomeIcon icon={faComment} />
+            </button>
           </div>
         </div>
 
         <ButtonModal
         isOpenModal={isOpenModal}
-        Body={SearchBar}
+        Body={Forms}
         onClose={() => setisOpenModal(false)}
         />
       </>
-
-  )
+    )
 }
 
-export default CustomModal
-
-
-
-
-
-
+export default ModalForm

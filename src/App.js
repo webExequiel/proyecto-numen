@@ -1,13 +1,12 @@
-import SearchBar from "./componnents/SearchBar/SearchBar";
-import CustomModal from "./componnents/modal/CustomModal";
-
+import ModalForm from './componnents/modal/ModalForm';
 
 function App() {
   return (
+<>
 
-    <>
-    <SearchBar />
-    </>
+  <ModalForm />
+
+</>
 
   );
 }

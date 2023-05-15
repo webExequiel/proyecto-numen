@@ -3,7 +3,7 @@ import React from 'react';
 const Button = (props) => {
   return (
 
-    <button onClick={''} >
+    <button className='btn btn-primary' onClick={''} >
       <FontAwesomeIcon icon={props.icon} />
     </button>
 

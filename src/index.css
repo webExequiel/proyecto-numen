@@ -3,10 +3,14 @@
 /* Estilos botones navbar */
 
 .btn.btn-primary {
-  font-size: 20px;
-  color: #000000;
-  background-color: #357401;
-  border: 0;
+	font-size: 20px;
+	color: #ffffff;
+	background-color: #357401;
+	border: 0;
+}
+
+.btn.btn-primary:hover {
+	background-color: #357401 !important;
 }
 
 /* Estilos formulario Login */
@@ -19,14 +23,14 @@
 }
 
 .formulario {
-  width: 50%;
+	width: 50%;
 	font-size: 15px;
-  font-family: 'Lato', sans-serif;
-  background: #fff;
+	font-family: 'Lato', sans-serif;
 	border-radius: 5px;
 	padding: 20px;
 	box-shadow: rgba(0, 0, 0, 0.16) 0px 1px 4px;
-  background-color: #F3F820;
+	background-color: #357401;
+	color: #ffffff;
 }
 
 .formulario > div {
@@ -38,8 +42,8 @@
 	font-weight: 800;
 	font-size: 14px;
 	margin-bottom: 5px;
-	color: #1f1f1f;
-  background-color: #F3F820;
+	color: #ffffff;
+  	background-color: #357401;
 }
 
 .formulario input,
@@ -47,13 +51,13 @@
 	font-family: 'Lato', sans-serif;
 	width: 80%;
 	border-radius: 5px;
-	border: 2px solid #e2e2e2;
+	border: 2px solid #357401;
 	font-size: 18px;
 	padding: 10px;
 	margin-bottom: 5px;
-	color: #1f1f1f;
-  background-color: #F3F820;
-  border-color: #4A7F45;
+	color: #357401;
+	background-color: #9FC539;
+	border-color: #357401;
 }
 
 .formulario input:focus {
@@ -69,7 +73,7 @@
 
 .formulario button[type="submit"] {
 	display: block;
-	background: #407A41;
+	background-color: #9FC539;
 	font-weight: 800;
 	font-family: 'Lato', sans-serif;
 	border: none;
@@ -77,21 +81,21 @@
 	width: 100%;
 	padding: 10px;
 	border-radius: 5px;
-	color: #9FC539;
+	color: #357401;
 	font-size: 16px;
 	transition: .3s ease all;
 }
 
 .formulario button[type="submit"]:hover {
-	background: #9FC539;
-  color: #407A41;
+	background: #357401;
+  	color: #9FC539;
 }
 
 .formulario .exito {
 	text-align: center;
 	font-size: 14px;
 	padding-top: 20px;
-	color: #02a802;
+	color: #ffffff;
 }
 
 .formulario input[type="radio"] {
@@ -101,11 +105,12 @@
 /* Estilos barra buscador */
 
 .form-control {
-  background-color: #9FC539;
-  color: #1f1f1f;
-  font-family: 'Lato', sans-serif;
-  border-radius: 5px;
-  border: 0;
+	background-color: #357401;
+	color: #ffffff;
+	font-size: 15px;
+	font-family: 'Lato', sans-serif;
+	border-radius: 5px;
+	border: 0;
 }
 
 

@@ -1,9 +1,8 @@
 
 import React, {useState} from 'react';
 import { Formik, Form, Field } from "formik";
-import styled from 'styled-components';
 
-const FormLogin = () => {
+const Forms = () => {
 
     const [formularioEnviado, cambiarFormularioEnviado] = useState(false);
 
@@ -77,4 +76,4 @@ const FormLogin = () => {
     );
 }
 
-export default FormLogin
+export default Forms

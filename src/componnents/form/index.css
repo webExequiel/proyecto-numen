@@ -51,9 +51,13 @@ body {
 	color: #1f1f1f;
 }
 
+.formulario textarea {
+	resize: none !important;
+}
+
 .formulario input:focus {
 	outline: none;
-	border: 2px solid #0085FF;
+	border: 2px solid #02a802;
 }
 
 .formulario .error {
@@ -64,7 +68,7 @@ body {
 
 .formulario button[type="submit"] {
 	display: block;
-	background: #0085FF;
+	background: #02a802;
 	font-weight: 600;
 	font-family: 'Open Sans', sans-serif;
 	border: none;
@@ -78,14 +82,14 @@ body {
 }
 
 .formulario button[type="submit"]:hover {
-	background: #0051ff;
+	background: #02a802;
 }
 
-.formulario .exito {
+.exito {
 	text-align: center;
 	font-size: 14px;
 	padding-top: 20px;
-	color: #02a802;
+	color: #02a802 !important;
 }
 
 .formulario input[type="radio"] {
