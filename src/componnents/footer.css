@@ -1,0 +1,49 @@
+
+
+
+
+
+@media screen and (max-width: 900px) {
+    .Redes{
+        display: inline;
+        justify-content: center;
+        flex-direction: column;
+    }
+}
+
+
+
+
+
+
+
+@media screen and (max-width: 767px) {
+    .respon {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+
+    }
+    
+}
+@media screen and (max-width:567px) {
+    .footer-links{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    .Logo {
+       margin-left: 135px;
+      margin-bottom: 30px;
+       }
+       .Redes{
+           display: flex;
+           flex-direction: row;
+
+
+
+       }
+    
+}
