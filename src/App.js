@@ -1,13 +1,10 @@
-import ModalForm from './componnents/modal/ModalForm';
+
 
 function App() {
   return (
-<>
 
-  <ModalForm />
-
-</>
-
+    <></>
+      
   );
 }
 
