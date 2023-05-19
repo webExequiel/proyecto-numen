@@ -16,10 +16,10 @@ export const getCart = async () => {
     return res.data;
 }
 
-export const addItemToCart = async (data, isAlreadyInCart) => {
-    const ENDPOINT = `http://localhost:3001/cart/${isAlreadyInCart ? data.id : ''}`
+export const addItemToCart = async (data,) => {
+    const ENDPOINT = `http://localhost:3001/cart`
     const OPTIONS = {
-        method: isAlreadyInCart ? "PUT" : "POST",
+        method: "POST",
         headers: { "content-type": "application/json" },
         data: data
     }
@@ -40,17 +40,14 @@ export const updateCartData = async (data) => {
 
 export const deleteCartData = async (data) => {
     const { name, id } = data;
-    let isDeleteData = window.confirm(`Estas seguro que queres eliminar la vianda ${name}`);
 
-    if (isDeleteData) {
-        const ENDPOINT = `http://localhost:3001/cart${id}`
-        const OPTIONS = {
-            method: "DELETE",
-            headers: { "content-type": "application/json" }
-        }
-
-        return (await axios(ENDPOINT, OPTIONS)).data;
+    const ENDPOINT = `http://localhost:3001/cart/${id}`
+    const OPTIONS = {
+        method: "DELETE",
+        headers: { "content-type": "application/json" }
     }
+
+    return (await axios(ENDPOINT, OPTIONS)).data;
 }
 
 
