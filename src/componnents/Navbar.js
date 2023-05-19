@@ -10,7 +10,7 @@ const Navbar = () => {
   return (
     <Nav>
       <Logo />
-      <Hamburg oneClik={() => setIsOpen(!isOpen)}>
+      <Hamburg onClick={() => setIsOpen(!isOpen)}>
         <span />
         <span />
         <span />

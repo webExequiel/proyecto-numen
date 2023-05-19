@@ -15,6 +15,7 @@ const Img1 = styled.img`
   border-radius: 4px;
   padding: 5px;
   width: 90px;
-  height: 90px;`
+  height: 90px;
+  `
   ;
 export default Logo
