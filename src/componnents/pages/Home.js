@@ -13,7 +13,7 @@ const Home = () => {
 }
 const Imagen = styled.img`
 flex-direction:column;
-height: 70%;
+height:100vh;
 width: 100%;
 object-fit:cover;
 object-position:bottom;`
