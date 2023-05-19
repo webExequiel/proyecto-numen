@@ -17,21 +17,19 @@ action = { type: TYPES.SET_PRODUCTS, payload: res.datz }
 export function shoppingReducer(state, action) {
     switch (action.type) {
         case TYPES.ADD_TO_CART: {
-            const newItem = state.products.find(product => product.id === action.payload);
-
-            const itemInCart = state.cart.find(item => item.id === newItem.id);
+            const { itemInCart, itemToAdd } = action.payload;
 
             return itemInCart
                 ? {
                     ...state,
-                    cart: state.cart.map((item) => item.id === newItem.id
-                        ? { ...item, quantity: item.quantity + 1 }
+                    cart: state.cart.map((item) => item.id === itemToAdd.id
+                        ? itemToAdd
                         : item
                     ),
                 }
                 : {
                     ...state,
-                    cart: [...state.cart, { ...newItem, quantity: 1 }]
+                    cart: [...state.cart, itemToAdd]
                 };
         };
 
@@ -66,6 +64,11 @@ export function shoppingReducer(state, action) {
             return {
                 ...state,
                 products: action.payload
+            };
+        case TYPES.SET_CART:
+            return {
+                ...state,
+                cart: action.payload
             };
         default:
             return state;
