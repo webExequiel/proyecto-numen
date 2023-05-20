@@ -110,12 +110,14 @@
 	font-size: 15px;
 	font-family: 'Lato', sans-serif;
 	border-radius: 5px;
-	border: 0;
+}
+
+.containerInput {
+	padding: 30px;
 }
 
 * {
 	box-sizing: border-box;
-
 }
 
 body {

@@ -1,12 +1,12 @@
-/* import ModalForm from './componnents/modal/ModalForm'; */
+import ModalForm from './componnents/modal/ModalForm';
 
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Theme from './componnents/style/Theme';
-import styled from 'styled-components';
+
 import ViandasContextProvider from './context/ViandasContextProvider';
 import Rutas from './componnents/routes/Rutas';
 
-
+import styled from 'styled-components';
 const App = () => {
   return (
     <>
@@ -14,7 +14,7 @@ const App = () => {
         <ViandasContextProvider>
           <Container>
             <Rutas />
-            {/*  <ModalForm /> */}
+            <ModalForm />
           </Container>
         </ViandasContextProvider>
       </Theme>
