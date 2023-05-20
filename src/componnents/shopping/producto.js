@@ -16,7 +16,7 @@ const Product = ({ data, addToCart, setModalProduct }) => {
             />
             <Title>{name}</Title>
             <Price>${price}</Price>
-            <Button onClick={() => addToCart(id)}><SendButton /></Button>
+            <Button onClick={() => addToCart(data)}><SendButton /></Button>
         </StyledCard>
     )
 };

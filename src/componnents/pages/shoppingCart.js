@@ -4,10 +4,12 @@ import CartItem from "../shopping/cartItem";
 import { ViandasContext } from "../../context/ViandasContextProvider";
 import styled from 'styled-components';
 import CustomModal from "../viandasModal/ViandaModal";
+import SearchBar from "../SearchBar/SearchBar";
 
 const ShoppingCart = () => {
   const { cart, products } = useContext(ViandasContext);
-  const [modalProduct, setModalProduct] = useState(null)
+  const [modalProduct, setModalProduct] = useState(null);
+  const [viandasFiltradas, setViandasFiltradas] = useState([]);
 
   const total = cart.items.reduce((acc, item) => acc + item.price * item.quantity, 0);
 
@@ -15,8 +17,9 @@ const ShoppingCart = () => {
     <>
       <CustomModal product={modalProduct} onClose={() => setModalProduct(null)} />
       <Title2>Viandas</Title2>
+      <SearchBar viandas={products.items} setViandasFiltradas={setViandasFiltradas} />
       <div className="box grid-responsive">
-        {products.items.map((product) => <Product
+        {viandasFiltradas.map((product) => <Product
           setModalProduct={setModalProduct}
           key={product.id}
           data={product}
