@@ -1,5 +1,17 @@
 
+@media screen and (max-width: 1240px) {
+       
+.Logo{
+ display: flex;
+ justify-content: center;
 
+}
+
+
+
+
+
+}
 
 
 
@@ -10,6 +22,12 @@
         flex-direction: column;
         
     }
+    .respon {
+    margin: 0;
+    padding: 0;
+
+
+    }
 }
 
 
@@ -19,32 +37,106 @@
 
 
 @media screen and (max-width: 767px) {
-    .respon {
+    .respond {
       display: flex;
       flex-direction: column;
-      justify-content: center;
+      justify-content: flex-start;
       align-items: center;
-
-    }
-    
-}
-@media screen and (max-width:567px) {
-    .footer-links{
-        display: flex;
-        flex-direction: column;
-        justify-content: center;
-        align-items: center;
+      margin-right: 400px;
     }
     .Logo {
-       margin-left: 135px;
-      margin-bottom: 30px;
+        
+            margin-left: 35px;
+           margin-bottom: 30px;
+            
+        }
+        .sb_footer-copyright{
+            display: flex;
+            justify-content: center;
+        }
+    
+    
+}
+@media screen and (max-width:578px) {
+    .respond {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: center;
+        margin-right: 400px;
+      }
+      .footer-links {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        align-items: center;
+        margin-right: 300px;
+      }
+    .Logo {
+       display: block;
+       margin: auto;
+       margin-bottom: 40px;
+       margin-left: 150px;
+      
        }
        .Redes{
            display: flex;
            flex-direction: row;
+        }
+        .estilo-tarjeta{
+            width: 20px;
+            height: 30px;
+        
+    }
+    .img {
+        display: flex;
+        flex-direction: column;
+        justify-content: center ;
+        align-items: center;
+    }
+    .respond{
+      display: flex;
+      justify-content: space-between;
+      margin: 0;
+
+    }
+    .h4{
+        color:black;
+        text-transform:capitalize;
+        margin-bottom: 30px;
+        font-weight: 500;
+        position:relative;
+        font-family: 'Hammersmith One', sans-serif;
+        box-shadow : 2px;
+    }
+    .h4::before{
+        font-size :10px;
 
 
-
-       }
+  content: '';
+  position: relative;
+  left:5;
+  bottom: -10px;
+  background-color:#F88C80;
+  height: 2px;
+  box-sizing: border-box;
+  width: 100%;
+  
+  
+    }
     
+}
+.esp {
+width: 30px;
+height: 30px;
+}
+.ing{
+    width: 30px;
+height: 30px;
+
+}
+.btn{
+    display:flex;
+    justify-content: center;
+    flex-direction: column;
 }

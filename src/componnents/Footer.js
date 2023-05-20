@@ -19,29 +19,34 @@ import { faLinkedin } from "@fortawesome/free-brands-svg-icons";
  
 
 
-
+/*Fondo del Footer */
 const Body = styled.div`
 padding: 50px 0 0 0;
 background-color:#357401  ;
 `
+/*Estilo del Logo */
 const IMG = styled.img`
 width:170px;
 height: 170px;
 margin-left : 35px;
 `
+/*Contenedor principal logo,links,redes*/ 
 const Controw = styled.div`
   display: flex ;
   flex-wrap : wrap ;
   margin-left : 30px;
   `
+  /*Contenedor principal de Redes Sociales */
 const Redes = styled.ul`
 display:flex ;
 `
+/*Imagen de las Tarjetas */
 const Img = styled.img `
 
  height:50px;
  width:110px;
 `
+/* Titulos de los links */
 const H4 = styled.h4`
 font-size :22px;
 color: #ffffff :
@@ -62,6 +67,7 @@ box-shadow : 2px;
   width: 60px;
   }
 `
+/* Links*/
 const A =styled.a`
 font-size: 30px ;
 font-family: ${props => props.theme.fonts.titleFont};
@@ -76,35 +82,47 @@ display:block;
   padding-left:3px;
 }
 `
+/*Lista de los links */
 const List = styled.ul`
 list-style:none;
 text-align: center ;
 margin: 0  50px 30px 0 ;
 `
+/*Contenedor general de los links */
 const Contlinks = styled.div`
 margin-left: 100px;
 display:flex;
 justify-content:center ;
 `
+/*Contenedor de nosotros , contacto */
 const Listfooter =styled.div`
 text-align : center ;
 `
+/*Contenedor de Metodo de pago */
 const MetPag = styled.div`
 padding: 50px 0 0 0;
 display:flex;
+flex-direction: column;
 `
+/*Contenedor de las tarjetas */
 const Tarjetas = styled.div`
 margin-left: 30px;
+display: flex;
+justify-content: center;
 `
+/*Contenedor Derechos reservados */
 const Copy =styled.div`
-font-size :22px;
+font-size :30px;
 color: #ffffff :
 text-transform:capitalize;
 margin-bottom: 30px;
 font-weight: 500;
 position:relative;
-font-family: 'Hammersmith One', sans-serif;
+font-family: ${props => props.theme.fonts.titleFont};
+display:flex ;
+justify-content: center ;
 `
+/*Links de las Redes Sociales */
 const A2 = styled.a`
 
 position: relative;
@@ -133,27 +151,37 @@ margin-left: 15px;
 }
 
 `
+/*Titulo del Metodo de pago */
+const TituloPago = styled.div`
+display:flex ;
+justify-content: center ;
+
+
+
+
+`
 const Footer = () => {
     return (
       <footer>
-        <Body>
+        <Body className="body">
           <Controw className="respond" >
        
           <div className="Logo">
           <IMG src={Vegan} />
+        
         </div>
              <Contlinks className="footer-links">
        
                   <Listfooter className="">
-                  <H4>Nosotros</H4>
+                  <H4 className="h4">Nosotros</H4>
                     <List>
                     <li><A href="">¿Quienes somos?</A></li>
                     <li><A href="">¿Como funciona?</A></li>
-                    <li><A href="">Nuestra historia</A></li>
+                    <li><A  href="">Nuestra historia</A></li>
                     </List>
                   </Listfooter>
-                  <Listfooter className="Footercol">
-                <H4>Contacto</H4>
+                  <Listfooter className="">
+                <H4 className="h4">Contacto</H4>
                   <List>
                     <li><A href="">+541178889032</A></li>
                     <li><A href="">Vegan-Food@gmail.com</A></li>
@@ -161,7 +189,7 @@ const Footer = () => {
                     </List>
                   </Listfooter>
        <Listfooter>
-        <H4> Sigamos conectados</H4>
+        <H4 className="h4"> Sigamos conectados</H4>
         <Redes className="Redes">
           <A2 href=""><FontAwesomeIcon icon= {faFacebook}/></A2>
           <A2 href=""><FontAwesomeIcon icon= {faTwitter}/></A2>
@@ -174,18 +202,18 @@ const Footer = () => {
   
   <MetPag className="metodo-pago">
 
-        <div className="met">
+        <TituloPago className="met">
         <h2 className="estilomet"><h2>Metodo de pago</h2></h2>
-        </div>
+        </TituloPago>
         <Tarjetas className="img">
-          <Img src={Visa}/>
-          <Img src={Mastercard}></Img>
-          <Img src={American}></Img>
-          <Img src={Naranja}></Img>
-          <Img src={Dinner}></Img>
-          <Img src={Shopping}></Img>
-          <Img src={Cabal}></Img>
-          <Img src={MerPag}></Img>
+          <Img className="estilo-tarjeta"src={Visa}/>
+          <Img className="estilo-tarjeta"src={Mastercard}></Img>
+          <Img className="estilo-tarjeta"src={American}></Img>
+          <Img className="estilo-tarjeta"src={Naranja}></Img>
+          <Img className="estilo-tarjeta"src={Dinner}></Img>
+          <Img className="estilo-tarjeta"src={Shopping}></Img>
+          <Img className="estilo-tarjeta"src={Cabal}></Img>
+          <Img className="estilo-tarjeta"src={MerPag}></Img>
           </Tarjetas>
 
           
@@ -199,8 +227,8 @@ const Footer = () => {
         <hr></hr>
         <div className="copyright">
         <div className="sb_footer-below">
-                  <div className="sb_footer-copyright">
-                  <Copy>
+                  <div className="sb">
+                  <Copy className="sb_footer-copyright">
                     Vegan Food@{new Date().getFullYear()}|
                     Todos los derechos reservados.
                    </Copy>
