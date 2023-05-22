@@ -6,7 +6,7 @@ import { Card } from "reactstrap";
 
 
 const Product = ({ data, addToCart, setModalProduct }) => {
-    const { id, name, price, image } = data;
+    const { name, price, image } = data;
 
     return (
         <StyledCard>

@@ -32,8 +32,7 @@ export function shoppingReducer(state, action) {
                     cart: [...state.cart, itemToAdd]
                 };
         };
-
-        case TYPES.REMOVE_ONE_PRODUCT: {
+        case TYPES.REMOVE_ONE_PRODUCT:
             return {
                 ...state,
                 cart: state.cart.map((item) => item.id === action.payload.id
@@ -41,8 +40,6 @@ export function shoppingReducer(state, action) {
                     : item
                 ),
             };
-
-        };
         case TYPES.REMOVE_ALL_PRODUCTS:
             return {
                 ...state,

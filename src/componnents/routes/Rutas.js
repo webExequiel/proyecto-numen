@@ -11,7 +11,6 @@ const Rutas = () => {
             <Routes>
                 <Route path='/' element={<Home />} />
                 <Route path='/productos' element={<ShoppingCart />} />
-                <Route path='/login' element={<Login />} />
             </Routes>
             {<Footer />}
         </Router>
