@@ -39,7 +39,7 @@ export const updateCartData = async (data) => {
 }
 
 export const deleteCartData = async (data) => {
-    const { name, id } = data;
+    const { id } = data;
 
     const ENDPOINT = `http://localhost:3001/cart/${id}`
     const OPTIONS = {

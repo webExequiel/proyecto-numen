@@ -1,6 +1,5 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
-import axios from 'axios';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 const SearchBar = ({ viandas, setViandasFiltradas }) => {
@@ -8,13 +7,11 @@ const SearchBar = ({ viandas, setViandasFiltradas }) => {
   const [busqueda, setBusqueda] = useState('')
 
   useEffect(() => {
-    const resultadosBusqueda = viandas.filter((viandas) => {
-      if (viandas.name.toString().toLowerCase().includes(busqueda.toLowerCase())) {
-        return viandas
-      }
+    const resultadosBusqueda = viandas.filter((vianda) => {
+      return vianda.name.toLowerCase().includes(busqueda.toLowerCase());
     })
     setViandasFiltradas(resultadosBusqueda);
-  }, [busqueda, viandas])
+  }, [busqueda, viandas, setViandasFiltradas])
 
   const handleChange = e => {
     setBusqueda(e.target.value);
