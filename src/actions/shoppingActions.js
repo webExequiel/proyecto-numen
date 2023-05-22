@@ -4,7 +4,8 @@ export const TYPES = {
     REMOVE_ALL_PRODUCTS: "REMOVE_ALL_PRODUCTS",
     CLEAR_CART: "CLEAR_CART",
     TOTAL_AMOUNT: "TOTAL_AMOUNT",
-    SET_PRODUCTS: "SET_PRODUCTS"
+    SET_PRODUCTS: "SET_PRODUCTS",
+    SET_CART: "SET_CART"
 };
 
 
@@ -17,6 +18,10 @@ export const removeAllProducts = (id) => {
 
 export const setProducts = (products) => {
     return ({ type: TYPES.SET_PRODUCTS, payload: products });
+}
+
+export const setCart = (cart) => {
+    return ({ type: TYPES.SET_CART, payload: cart });
 }
 
 export const removeOneProduct = (id) => (

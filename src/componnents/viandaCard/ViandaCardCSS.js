@@ -1,6 +1,5 @@
 import styled, { css } from "styled-components";
-/* #FDFC47
-#24FE41 */
+
 const gradient = degs => css`
     background:
         linear-gradient(
@@ -13,6 +12,7 @@ const gradient = degs => css`
 export const Card = styled.div`
     overflow: hidden;
     padding: 1rem;
+    margin-bottom: 10px;
     border-radius: 0.5rem;
     ${gradient()};
     box-shadow: 0 2.4px 3.8px .3px rgba(0, 0, 0, 0.25),
@@ -20,7 +20,8 @@ export const Card = styled.div`
                 0 1.1px 1.5px -0.7px rgba(0, 0, 0, 0.25);
     img {
         width: 100%;
-        border-radius: 0.5rem
+        border-radius: 0.5rem;
+        min-height: 150px;
     }
 `;
 

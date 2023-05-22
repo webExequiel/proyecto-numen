@@ -17,39 +17,30 @@ action = { type: TYPES.SET_PRODUCTS, payload: res.datz }
 export function shoppingReducer(state, action) {
     switch (action.type) {
         case TYPES.ADD_TO_CART: {
-            const newItem = state.products.find(product => product.id === action.payload);
-
-            const itemInCart = state.cart.find(item => item.id === newItem.id);
+            const { itemInCart, itemToAdd } = action.payload;
 
             return itemInCart
                 ? {
                     ...state,
-                    cart: state.cart.map((item) => item.id === newItem.id
-                        ? { ...item, quantity: item.quantity + 1 }
+                    cart: state.cart.map((item) => item.id === itemToAdd.id
+                        ? itemToAdd
                         : item
                     ),
                 }
                 : {
                     ...state,
-                    cart: [...state.cart, { ...newItem, quantity: 1 }]
+                    cart: [...state.cart, itemToAdd]
                 };
         };
 
         case TYPES.REMOVE_ONE_PRODUCT: {
-            const itemToDelete = state.cart.find(item => item.id === action.payload);
-
-            return itemToDelete.quantity > 1
-                ? {
-                    ...state,
-                    cart: state.cart.map((item) => item.id === itemToDelete.id
-                        ? { ...item, quantity: item.quantity - 1 }
-                        : item
-                    ),
-                }
-                : {
-                    ...state,
-                    cart: state.cart.filter(item => item.id !== itemToDelete.id)
-                };
+            return {
+                ...state,
+                cart: state.cart.map((item) => item.id === action.payload.id
+                    ? action.payload
+                    : item
+                ),
+            };
 
         };
         case TYPES.REMOVE_ALL_PRODUCTS:
@@ -66,6 +57,11 @@ export function shoppingReducer(state, action) {
             return {
                 ...state,
                 products: action.payload
+            };
+        case TYPES.SET_CART:
+            return {
+                ...state,
+                cart: action.payload
             };
         default:
             return state;
