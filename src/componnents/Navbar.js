@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import { NavLink } from 'react-router-dom';
 import styled from 'styled-components';
 import Logo from './Logo';
+import ModalForm from './modal/ModalForm';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +19,7 @@ const Navbar = () => {
         <MenuLink to='/'>Home</MenuLink>
         <MenuLink to=''>Nosotros</MenuLink>
         <MenuLink to='/productos'>Nuestros Productos</MenuLink>
-        <MenuLink to=''>Contacto</MenuLink>
+        <ModalForm />
       </Menu>
     </Nav>
   )

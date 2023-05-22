@@ -71,22 +71,5 @@
       "image": "burger.jpg"
     }
   ],
-  "cart": [
-    {
-      "id": 10,
-      "name": "Hamburguesas veganas de lentejas y verduras",
-      "price": 480,
-      "description": "Reducir el consumo de carne en casa y en su lugar añadir más legumbres y verduras a nuestra dieta es una buena idea, tanto a nivel personal para mejorar nuestra salud, además es una buena forma de contribuir a cuidar un poquito más de nuestro planeta. ",
-      "image": "burger.jpg",
-      "quantity": 1
-    },
-    {
-      "id": 9,
-      "name": "Wrap de Espelta rellenos de Arroz, Coliflor al Curry y Tofu",
-      "price": 780,
-      "description": "Tortillas de espelta con semillas (lino, chía y sésamo) como base para preparar estos burritos rellenos de arroz, coliflor con curry y tofu. ",
-      "image": "rollVegano.jpg",
-      "quantity": 2
-    }
-  ]
+  "cart": []
 }
